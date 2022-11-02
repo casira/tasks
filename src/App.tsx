@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "react-bootstrap/esm/Button";
 import "./App.css";
 
 function App(): JSX.Element {
@@ -12,6 +13,10 @@ function App(): JSX.Element {
                 automatically reload.
             </p>
             <h1>Hello World</h1>
+            <div>
+                <Button>Wish</Button>
+            </div>
+            <p>I wish I could have a button here.</p>
         </div>
     );
 }
