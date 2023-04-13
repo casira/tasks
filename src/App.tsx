@@ -1,6 +1,6 @@
 import React from "react";
-import Button from "react-bootstrap/esm/Button";
 import "./App.css";
+import { Button } from "react-bootstrap";
 
 function App(): JSX.Element {
     return (
