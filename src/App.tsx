@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import { Button } from "react-bootstrap";
+import Image from "./images/stolen_jirachi.jpg";
 
 function App(): JSX.Element {
     return (
@@ -12,11 +13,27 @@ function App(): JSX.Element {
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload.
             </p>
-            <h1>Hello World</h1>
+            <h1>The Wishing Star</h1>
+            <img src={Image} height={360} alt="A stolen Jirachi" />
             <div>
-                <Button>Wish</Button>
+                <b>Rules of The Wishing Star:</b>
+                <ol>
+                    <li>
+                        Wishes cannot alter the consciousness of another living
+                        creature.
+                    </li>
+                    <li>
+                        Each wish will alter a fundamental component of your
+                        being in unknown ways.
+                    </li>
+                    <li>
+                        Wishes have to be fun, helpful, or REALLY entertaining.
+                    </li>
+                </ol>
             </div>
-            <p>I wish I could have a button here.</p>
+            <Button onClick={() => console.log("Wish granted")}>
+                Make a wish
+            </Button>
         </div>
     );
 }
