@@ -36,26 +36,26 @@ describe("Some basic CSS is added.", () => {
 });
 
 describe("Some Bootstrap Elements are added", () => {
-    test("There is one bootstrap button with the text 'Log Hello World'", () => {
+    test("There is one bootstrap button with the text 'Wish'", () => {
         render(<App />);
-        const button = screen.getByRole("button", { name: /Log Hello World/i });
+        const button = screen.getByRole("button", { name: /Wish/i });
         expect(button).toBeInTheDocument();
         expect(button).toHaveClass("btn");
         expect(button).toHaveClass("btn-primary");
     });
 
-    test("Not clicking the bootstrap button does not logs 'Hello World!'", () => {
+    test("Not clicking the bootstrap button does not logs 'Wish granted'", () => {
         const consoleSpy = jest.spyOn(console, "log");
         render(<App />);
-        expect(consoleSpy).not.toHaveBeenCalledWith("Hello World!");
+        expect(consoleSpy).not.toHaveBeenCalledWith("Wish granted");
     });
 
-    test("Clicking the bootstrap button logs 'Hello World!'", () => {
+    test("Clicking the bootstrap button logs 'Wish granted'", () => {
         const consoleSpy = jest.spyOn(console, "log");
         render(<App />);
-        const button = screen.getByRole("button", { name: /Log Hello World/i });
+        const button = screen.getByRole("button", { name: /Wish/i });
         userEvent.click(button);
-        expect(consoleSpy).toHaveBeenCalledWith("Hello World!");
+        expect(consoleSpy).toHaveBeenCalledWith("Wish granted");
     });
 });
 
