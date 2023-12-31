@@ -5,20 +5,12 @@ import { QuestionType } from "../interfaces/question";
 export function ChangeType(): JSX.Element {
     const [type, setType] = useState<QuestionType>("short_answer_question");
     function change(): void {
-        setType(
-            type === "short_answer_question"
-                ? "multiple_choice_question"
-                : "short_answer_question"
-        );
+        setType(type === "short_answer_question" ? "multiple_choice_question" : "short_answer_question");
     }
     return (
         <div>
             <Button onClick={change}>Change Type</Button>
-            {type === "short_answer_question" ? (
-                <div>Short Answer</div>
-            ) : (
-                <div>Multiple Choice</div>
-            )}
+            {type === "short_answer_question" ? <div>Short Answer</div> : <div>Multiple Choice</div>}
         </div>
     );
 }

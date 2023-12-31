@@ -8,9 +8,7 @@ export function RevealAnswer(): JSX.Element {
     }
     return (
         <div>
-            <Button onClick={revelation}>
-                {visible ? "Hide Answer" : "Reveal Answer"}
-            </Button>
+            <Button onClick={revelation}>{visible ? "Hide Answer" : "Reveal Answer"}</Button>
             {visible && <div>42</div>}
         </div>
     );
