@@ -4,5 +4,7 @@
     "editor.formatOnPaste": true,
     "[typescriptreact]": {
         "editor.defaultFormatter": "vscode.typescript-language-features"
-    }
+    },
+    "editor.defaultFoldingRangeProvider": "esbenp.prettier-vscode",
+    "prettier.printWidth": 120
 }
