@@ -25,8 +25,8 @@ export function TwoDice(): JSX.Element {
     }
     return (
         <div>
-            <h1>Two Dice</h1>
-            <Button onClick={() => setLeftDie(d6())}>Roll Left</Button>
+            <h2>Two Dice</h2>
+            <Button onClick={() => setLeftDie(d6())}>Roll Left</Button>&nbsp;
             <Button onClick={() => setRightDie(d6())}>Roll Right</Button>
             <div>
                 You rolled a <span data-testid="left-die">{leftDie}</span> and a{" "}

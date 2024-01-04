@@ -5,9 +5,8 @@ export function Counter(): JSX.Element {
     const [value, setValue] = useState<number>(0);
     return (
         <span>
-            <Button onClick={() => setValue(1 + value)}>
-                Add One: {value}
-            </Button>
+            <h2>Counter</h2>
+            <Button onClick={() => setValue(1 + value)}>Add One: {value}</Button>
         </span>
     );
 }
