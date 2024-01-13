@@ -37,9 +37,7 @@ export function tripleNumbers(numbers: number[]): number[] {
  * the number cannot be parsed as an integer, convert it to 0 instead.
  */
 export function stringsToIntegers(numbers: string[]): number[] {
-    return numbers.map((numberize: string): number =>
-        !Number.isNaN(parseInt(numberize)) ? parseInt(numberize) : 0
-    );
+    return numbers.map((numberize: string): number => (!Number.isNaN(parseInt(numberize)) ? parseInt(numberize) : 0));
     return numbers.map((numberize: string): number => {
         if (!Number.isNaN(parseInt(numberize))) {
             return parseInt(numberize);
@@ -78,9 +76,7 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
         }
         return toCaps;
     });
-    return excitement.filter(
-        (questions: string): boolean => !questions.includes("?")
-    );
+    return excitement.filter((questions: string): boolean => !questions.includes("?"));
 };
 
 /**
@@ -88,9 +84,7 @@ export const shoutIfExclaiming = (messages: string[]): string[] => {
  * 4 letters long.
  */
 export function countShortWords(wordList: string[]): number {
-    const shortWords = wordList.filter(
-        (word: string): boolean => word.length < 4
-    );
+    const shortWords = wordList.filter((word: string): boolean => word.length < 4);
     return shortWords.length;
 }
 
@@ -101,8 +95,7 @@ export function countShortWords(wordList: string[]): number {
  */
 export function allRGB(colors: string[]): boolean {
     return colors.every(
-        (eachColor: string): boolean =>
-            eachColor === "red" || eachColor === "green" || eachColor === "blue"
+        (eachColor: string): boolean => eachColor === "red" || eachColor === "green" || eachColor === "blue"
     );
 }
 
@@ -117,10 +110,7 @@ export function makeMath(addends: number[]): string {
     if (addends.length < 1) {
         return "0=0";
     }
-    const sum = addends.reduce(
-        (currentTotal: number, num: number) => currentTotal + num,
-        0
-    );
+    const sum = addends.reduce((currentTotal: number, num: number) => currentTotal + num, 0);
     const theMath = addends.join("+");
     return `${sum}=${theMath}`;
 }
@@ -136,20 +126,12 @@ export function makeMath(addends: number[]): string {
  */
 export function injectPositive(values: number[]): number[] {
     values = [...values];
-    const sum = values.reduce(
-        (currentTotal: number, num: number) => currentTotal + num,
-        0
-    );
-    const position = values.findIndex(
-        (negative: number): boolean => negative < 0
-    );
+    const sum = values.reduce((currentTotal: number, num: number) => currentTotal + num, 0);
+    const position = values.findIndex((negative: number): boolean => negative < 0);
     // if array contains a negative value
     if (position !== -1) {
         const posVals = values.slice(0, position);
-        const posSum = posVals.reduce(
-            (posTotal: number, pos: number) => posTotal + pos,
-            0
-        );
+        const posSum = posVals.reduce((posTotal: number, pos: number) => posTotal + pos, 0);
         values.splice(position + 1, 0, posSum);
         return values;
     }

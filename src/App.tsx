@@ -32,7 +32,7 @@ function App(): JSX.Element {
             </div>
             <Button onClick={() => console.log("Wish granted")}>Make a wish</Button>
             <hr></hr>
-            {/* <DoubleHalf></DoubleHalf> */}
+            <DoubleHalf></DoubleHalf>
             <hr></hr>
             <ChooseTeam></ChooseTeam>
             <hr></hr>
